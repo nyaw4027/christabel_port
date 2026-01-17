@@ -606,7 +606,7 @@
                 <div class="profile-img" id="profileImage">
                     <div class="image-upload-zone" id="profileImageZone">
                         <!-- Replace the src with actual image URL -->
-                        <img src="https://via.placeholder.com/220/ec4899/ffffff?text=CA" alt="Christabel Antwi" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        <img src="images/profile.jpeg" alt="Christabel Antwi" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                     </div>
                 </div>
                 <div>
@@ -647,19 +647,19 @@
                 <div class="contact-card" onclick="sendEmail()">
                     <div class="icon">📧</div>
                     <h3>Email</h3>
-                    <p>christabel.antwi@email.com</p>
+                    <p>antwichristabel702@gmail.com</p>
                 </div>
 
                 <div class="contact-card" onclick="makeCall()">
                     <div class="icon">📱</div>
                     <h3>Phone</h3>
-                    <p>+233 XX XXX XXXX</p>
+                    <p>+233 502381779</p>
                 </div>
 
                 <div class="contact-card whatsapp-card" onclick="openWhatsApp()">
                     <div class="icon">💬</div>
                     <h3>WhatsApp</h3>
-                    <p>+233 XX XXX XXXX</p>
+                    <p>+233 502381779</p>
                 </div>
 
                 <div class="contact-card" onclick="showLocation()">
@@ -881,21 +881,20 @@
             showNotification(`New ${type} slot added! Click to upload. 🎉`);
         }
 
-        // Email function
-        function sendEmail() {
-            window.location.href = `mailto:${contactInfo.email}?subject=Hello Christabel&body=Hi Christabel, I came across your portfolio...`;
-        }
+// Email function
+function sendEmail() {
+    window.location.href = "mailto:antwichristabel702@gmail.com?subject=Hello Christabel&body=Hi Christabel, I came across your portfolio...";
+}
+// Phone call function
+function makeCall() {
+    window.location.href = "tel:0502381779";
+}
 
-        // Phone call function
-        function makeCall() {
-            window.location.href = `tel:${contactInfo.phone}`;
-        }
-
-        // WhatsApp function
-        function openWhatsApp() {
-            const message = encodeURIComponent('Hello Christabel! I found your portfolio and would love to connect.');
-            window.open(`https://wa.me/${contactInfo.whatsapp.replace(/\+/g, '')}?text=${message}`, '_blank');
-        }
+       // WhatsApp function
+function openWhatsApp() {
+    const message = encodeURIComponent('Hello Christabel! I found your portfolio and would love to connect.');
+    window.open("https://wa.me/233502381779?text=" + message, "_blank");
+}
 
         // LinkedIn function
         function openLinkedIn() {
